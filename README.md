@@ -43,13 +43,14 @@ DUTS | COME15K | VT1000 | DIS | COD10K | SBU | CDS2K | ColonDB
 ## Citation
 If you find our work useful for your research or applications, please cite using this BibTeX:
 ```bibtex
-@misc{ji2023segment,
-      title={Segment Anything Is Not Always Perfect: An Investigation of SAM on Different Real-world Applications}, 
-      author={Wei Ji and Jingjing Li and Qi Bi and Tingwei Liu and Wenbo Li and Li Cheng},
-      year={2023},
-      eprint={2304.05750},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@article{Jisam2024,
+      author={Ji, Wei and Li, Jingjing and Bi, Qi and Liu, Tingwei and Li, Wenbo and Cheng, Li},
+      journal={Machine Intelligence Research},
+      title={Segment Anything Is Not Always Perfect: An Investigation of SAM on Different Real-world Applications},
+      year={2024},
+      volume={21},
+      pages={617--630},
+      publisher={Springer}
 }
 
 @misc{wu2023medical,
