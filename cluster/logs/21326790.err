@@ -1,0 +1,18 @@
+Loading gcc/12.2.0
+  Loading requirement: zlib-ng/2.1.6-jkgunjc zstd/1.5.6-uq5yyux binutils/2.42
+Resolved 151 packages in 2ms
+Audited 146 packages in 0.12ms
+'(MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /facebook/sam2.1-hiera-large/resolve/main/sam2.1_hiera_large.pt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x149e38a97c50>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"), '(Request ID: 9c94263b-c0f0-4f20-b9d7-fc5642584de9)')' thrown while requesting HEAD https://huggingface.co/facebook/sam2.1-hiera-large/resolve/main/sam2.1_hiera_large.pt
+Retrying in 1s [Retry 1/5].
+'(MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /facebook/sam2.1-hiera-large/resolve/main/sam2.1_hiera_large.pt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x149e38aa49d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"), '(Request ID: b0494aef-479e-45bf-ac03-6630ffcec31c)')' thrown while requesting HEAD https://huggingface.co/facebook/sam2.1-hiera-large/resolve/main/sam2.1_hiera_large.pt
+Retrying in 2s [Retry 2/5].
+'(MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /facebook/sam2.1-hiera-large/resolve/main/sam2.1_hiera_large.pt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x149e38aa5a10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"), '(Request ID: 22ccd829-a61e-4a07-9fd1-732152ac3025)')' thrown while requesting HEAD https://huggingface.co/facebook/sam2.1-hiera-large/resolve/main/sam2.1_hiera_large.pt
+Retrying in 4s [Retry 3/5].
+'(MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /facebook/sam2.1-hiera-large/resolve/main/sam2.1_hiera_large.pt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x149e38aa5f90>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"), '(Request ID: 2ae79010-d04e-4d2f-838f-6a578f95d88a)')' thrown while requesting HEAD https://huggingface.co/facebook/sam2.1-hiera-large/resolve/main/sam2.1_hiera_large.pt
+Retrying in 8s [Retry 4/5].
+'(MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /facebook/sam2.1-hiera-large/resolve/main/sam2.1_hiera_large.pt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x149e38aa6250>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"), '(Request ID: 85e97a8c-8749-4b56-b618-961f19a17798)')' thrown while requesting HEAD https://huggingface.co/facebook/sam2.1-hiera-large/resolve/main/sam2.1_hiera_large.pt
+Retrying in 8s [Retry 5/5].
+'(MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /facebook/sam2.1-hiera-large/resolve/main/sam2.1_hiera_large.pt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x149e38aa6f90>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"), '(Request ID: 40cbf73d-0e16-4403-8be2-d16d9c4c7444)')' thrown while requesting HEAD https://huggingface.co/facebook/sam2.1-hiera-large/resolve/main/sam2.1_hiera_large.pt
+/leonardo_work/IscrC_SLEY/azirilli/SAM-Not-Perfect/.venv/lib/python3.11/site-packages/torch/cuda/__init__.py:716: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+[ WARN:0@83.862] global loadsave.cpp:275 findDecoder imread_('../datasets/DUTS/test_images'): can't open/read file: check file path/integrity

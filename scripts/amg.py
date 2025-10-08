@@ -6,12 +6,14 @@
 
 import cv2  # type: ignore
 
-from segment_anything import SamAutomaticMaskGenerator, sam_model_registry
+from sam2.automatic_mask_generator import SAM2AutomaticMaskGenerator
 
 import argparse
 import json
 import os
 from typing import Any, Dict, List
+
+DATASETS = ['DUTS', 'COME15K', 'DIS', 'COD10K', 'SBU', 'CDS2K', 'ColonDB']
 
 parser = argparse.ArgumentParser(
     description=(
@@ -207,11 +209,12 @@ def get_amg_kwargs(args):
 
 def main(args: argparse.Namespace) -> None:
     print("Loading model...")
-    sam = sam_model_registry[args.model_type](checkpoint=args.checkpoint)
-    _ = sam.to(device=args.device)
+    # sam = sam_model_registry[args.model_type](checkpoint=args.checkpoint)
+    # _ = sam.to(device=args.device)
     output_mode = "coco_rle" if args.convert_to_rle else "binary_mask"
-    amg_kwargs = get_amg_kwargs(args)
-    generator = SamAutomaticMaskGenerator(sam, output_mode=output_mode, **amg_kwargs)
+    # amg_kwargs = get_amg_kwargs(args)
+    # generator = SamAutomaticMaskGenerator(sam, output_mode=output_mode, **amg_kwargs)
+    generator = SAM2AutomaticMaskGenerator.from_pretrained(model_id=args.model_type)
 
     print(f"Eval on datasets:{args.dataset_name}")
     args.input = "../datasets/" + args.dataset_name + "/test_images"
@@ -222,8 +225,10 @@ def main(args: argparse.Namespace) -> None:
             f for f in os.listdir(args.input) if not os.path.isdir(os.path.join(args.input, f))
         ]
         targets = [os.path.join(args.input, f) for f in targets]
+    
+    print(f"Processing {len(targets)} images in '{args.input}' and writing to '{args.output}'")
 
-    args.output = "/home/david/PycharmProjects/SAM-Not-Perfect/sam_output/" + args.dataset_name + "/" + args.model_type
+    args.output = "/leonardo_work/IscrC_SLEY/azirilli/SAM-Not-Perfect/sam_output/" + args.dataset_name + "/" + 'base_large'
     os.makedirs(args.output, exist_ok=True)
 
     for t in targets:

@@ -1,0 +1,6 @@
+Loading gcc/12.2.0
+  Loading requirement: zlib-ng/2.1.6-jkgunjc zstd/1.5.6-uq5yyux binutils/2.42
+/var/spool/slurmd/job21324867/slurm_script: line 21: ./.venv/bin/activate: No such file or directory
+Resolved 151 packages in 3ms
+Audited 146 packages in 0.12ms
+python: can't open file '/leonardo_work/IscrC_SLEY/azirilli/SAM-Not-Perfect/cluster/scripts/amg.py': [Errno 2] No such file or directory

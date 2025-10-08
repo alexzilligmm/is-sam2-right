@@ -1,0 +1,3 @@
+Failed to initialize NVML: Driver/library version mismatch
+NVML library version: 560.35
+Loading model...

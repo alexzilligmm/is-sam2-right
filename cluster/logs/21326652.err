@@ -1,0 +1,123 @@
+Loading gcc/12.2.0
+  Loading requirement: zlib-ng/2.1.6-jkgunjc zstd/1.5.6-uq5yyux binutils/2.42
+Resolved 151 packages in 3ms
+Audited 146 packages in 0.12ms
+'(MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /facebook/sam2.1-hiera-large/resolve/main/sam2.1_hiera_large.pt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x14cd65d7ec10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"), '(Request ID: 58683ae3-06a1-4e8c-85e5-243861b63c79)')' thrown while requesting HEAD https://huggingface.co/facebook/sam2.1-hiera-large/resolve/main/sam2.1_hiera_large.pt
+Retrying in 1s [Retry 1/5].
+'(MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /facebook/sam2.1-hiera-large/resolve/main/sam2.1_hiera_large.pt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x14cd65077d50>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"), '(Request ID: b8fdb20e-4a0b-4510-b471-726f9046c621)')' thrown while requesting HEAD https://huggingface.co/facebook/sam2.1-hiera-large/resolve/main/sam2.1_hiera_large.pt
+Retrying in 2s [Retry 2/5].
+'(MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /facebook/sam2.1-hiera-large/resolve/main/sam2.1_hiera_large.pt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x14cd6508cd50>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"), '(Request ID: 930aea8c-df48-40b2-be8f-7b393fee238d)')' thrown while requesting HEAD https://huggingface.co/facebook/sam2.1-hiera-large/resolve/main/sam2.1_hiera_large.pt
+Retrying in 4s [Retry 3/5].
+'(MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /facebook/sam2.1-hiera-large/resolve/main/sam2.1_hiera_large.pt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x14cd6508da50>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"), '(Request ID: 4e0903ec-1ab3-420e-9b41-a085cecd714e)')' thrown while requesting HEAD https://huggingface.co/facebook/sam2.1-hiera-large/resolve/main/sam2.1_hiera_large.pt
+Retrying in 8s [Retry 4/5].
+'(MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /facebook/sam2.1-hiera-large/resolve/main/sam2.1_hiera_large.pt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x14cd6508e750>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"), '(Request ID: 8e9a0bca-7b90-4380-ad66-d700cad09a8a)')' thrown while requesting HEAD https://huggingface.co/facebook/sam2.1-hiera-large/resolve/main/sam2.1_hiera_large.pt
+Retrying in 8s [Retry 5/5].
+'(MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /facebook/sam2.1-hiera-large/resolve/main/sam2.1_hiera_large.pt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x14cd6508f450>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"), '(Request ID: fa1c8009-2bb9-4a9c-8cd7-cf80e2db9c62)')' thrown while requesting HEAD https://huggingface.co/facebook/sam2.1-hiera-large/resolve/main/sam2.1_hiera_large.pt
+Traceback (most recent call last):
+  File "/leonardo_work/IscrC_SLEY/azirilli/SAM-Not-Perfect/.venv/lib/python3.11/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/leonardo_work/IscrC_SLEY/azirilli/SAM-Not-Perfect/.venv/lib/python3.11/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/leonardo_work/IscrC_SLEY/azirilli/SAM-Not-Perfect/.venv/lib/python3.11/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/leonardo_work/IscrC_SLEY/azirilli/SAM-Not-Perfect/.venv/lib/python3.11/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/leonardo_work/IscrC_SLEY/azirilli/SAM-Not-Perfect/.venv/lib/python3.11/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "/leonardo_work/IscrC_SLEY/azirilli/SAM-Not-Perfect/.venv/lib/python3.11/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/leonardo_work/IscrC_SLEY/azirilli/SAM-Not-Perfect/.venv/lib/python3.11/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "/leonardo_work/IscrC_SLEY/azirilli/SAM-Not-Perfect/.venv/lib/python3.11/site-packages/urllib3/connection.py", line 753, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/leonardo_work/IscrC_SLEY/azirilli/SAM-Not-Perfect/.venv/lib/python3.11/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x14cd6508f450>: Failed to establish a new connection: [Errno 101] Network is unreachable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/leonardo_work/IscrC_SLEY/azirilli/SAM-Not-Perfect/.venv/lib/python3.11/site-packages/requests/adapters.py", line 644, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/leonardo_work/IscrC_SLEY/azirilli/SAM-Not-Perfect/.venv/lib/python3.11/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/leonardo_work/IscrC_SLEY/azirilli/SAM-Not-Perfect/.venv/lib/python3.11/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /facebook/sam2.1-hiera-large/resolve/main/sam2.1_hiera_large.pt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x14cd6508f450>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/leonardo_work/IscrC_SLEY/azirilli/SAM-Not-Perfect/.venv/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1546, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/leonardo_work/IscrC_SLEY/azirilli/SAM-Not-Perfect/.venv/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/leonardo_work/IscrC_SLEY/azirilli/SAM-Not-Perfect/.venv/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1463, in get_hf_file_metadata
+    r = _request_wrapper(
+        ^^^^^^^^^^^^^^^^^
+  File "/leonardo_work/IscrC_SLEY/azirilli/SAM-Not-Perfect/.venv/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 286, in _request_wrapper
+    response = _request_wrapper(
+               ^^^^^^^^^^^^^^^^^
+  File "/leonardo_work/IscrC_SLEY/azirilli/SAM-Not-Perfect/.venv/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 309, in _request_wrapper
+    response = http_backoff(method=method, url=url, **params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/leonardo_work/IscrC_SLEY/azirilli/SAM-Not-Perfect/.venv/lib/python3.11/site-packages/huggingface_hub/utils/_http.py", line 327, in http_backoff
+    raise err
+  File "/leonardo_work/IscrC_SLEY/azirilli/SAM-Not-Perfect/.venv/lib/python3.11/site-packages/huggingface_hub/utils/_http.py", line 308, in http_backoff
+    response = session.request(method=method, url=url, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/leonardo_work/IscrC_SLEY/azirilli/SAM-Not-Perfect/.venv/lib/python3.11/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/leonardo_work/IscrC_SLEY/azirilli/SAM-Not-Perfect/.venv/lib/python3.11/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/leonardo_work/IscrC_SLEY/azirilli/SAM-Not-Perfect/.venv/lib/python3.11/site-packages/huggingface_hub/utils/_http.py", line 95, in send
+    return super().send(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/leonardo_work/IscrC_SLEY/azirilli/SAM-Not-Perfect/.venv/lib/python3.11/site-packages/requests/adapters.py", line 677, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: (MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /facebook/sam2.1-hiera-large/resolve/main/sam2.1_hiera_large.pt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x14cd6508f450>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"), '(Request ID: fa1c8009-2bb9-4a9c-8cd7-cf80e2db9c62)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/leonardo_work/IscrC_SLEY/azirilli/SAM-Not-Perfect/scripts/amg.py", line 255, in <module>
+    main(args)
+  File "/leonardo_work/IscrC_SLEY/azirilli/SAM-Not-Perfect/scripts/amg.py", line 215, in main
+    generator = SAM2AutomaticMaskGenerator.from_pretrained(model_id=args.model_type)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/leonardo_work/IscrC_SLEY/azirilli/SAM-Not-Perfect/.venv/lib/python3.11/site-packages/sam2/automatic_mask_generator.py", line 166, in from_pretrained
+    sam_model = build_sam2_hf(model_id, **kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/leonardo_work/IscrC_SLEY/azirilli/SAM-Not-Perfect/.venv/lib/python3.11/site-packages/sam2/build_sam.py", line 153, in build_sam2_hf
+    config_name, ckpt_path = _hf_download(model_id)
+                             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/leonardo_work/IscrC_SLEY/azirilli/SAM-Not-Perfect/.venv/lib/python3.11/site-packages/sam2/build_sam.py", line 148, in _hf_download
+    ckpt_path = hf_hub_download(repo_id=model_id, filename=checkpoint_name)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/leonardo_work/IscrC_SLEY/azirilli/SAM-Not-Perfect/.venv/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/leonardo_work/IscrC_SLEY/azirilli/SAM-Not-Perfect/.venv/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1010, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/leonardo_work/IscrC_SLEY/azirilli/SAM-Not-Perfect/.venv/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1117, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "/leonardo_work/IscrC_SLEY/azirilli/SAM-Not-Perfect/.venv/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1661, in _raise_on_head_call_error
+    raise LocalEntryNotFoundError(
+huggingface_hub.errors.LocalEntryNotFoundError: An error happened while trying to locate the file on the Hub and we cannot find the requested files in the local cache. Please check your connection and try again or make sure your Internet connection is on.
+slurmstepd: error: *** JOB 21326652 ON lrdn3443 CANCELLED AT 2025-10-08T16:14:00 ***
