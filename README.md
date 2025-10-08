@@ -66,3 +66,4 @@ If you find our work useful for your research or applications, please cite using
 ## Acknowledgement
 
 Thanks for the efforts of the authors involved in the [Segment Anything](https://github.com/facebookresearch/segment-anything). 
+# is-sam2-right
