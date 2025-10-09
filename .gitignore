@@ -3,3 +3,7 @@
 .idea/
 
 datasets/
+
+base_sam_output/
+eff_sam_output/
+efficient_sam_output/

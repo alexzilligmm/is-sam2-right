@@ -7,11 +7,16 @@
 import cv2  # type: ignore
 
 from sam2.automatic_mask_generator import SAM2AutomaticMaskGenerator
+from efficient_sam2.efficient_mask_generator import EfficientSAM2AutomaticMaskGenerator
+from efficient_sam2.utils.callbacks import CountInputs, TimeItCallback
 
 import argparse
 import json
 import os
 from typing import Any, Dict, List
+
+from torch import OutOfMemoryError
+import tqdm
 
 DATASETS = ['DUTS', 'COME15K', 'DIS', 'COD10K', 'SBU', 'CDS2K', 'ColonDB']
 
@@ -214,36 +219,43 @@ def main(args: argparse.Namespace) -> None:
     output_mode = "coco_rle" if args.convert_to_rle else "binary_mask"
     # amg_kwargs = get_amg_kwargs(args)
     # generator = SamAutomaticMaskGenerator(sam, output_mode=output_mode, **amg_kwargs)
-    generator = SAM2AutomaticMaskGenerator.from_pretrained(model_id=args.model_type)
+    # generator = SAM2AutomaticMaskGenerator.from_pretrained(model_id=args.model_type)
+    generator = EfficientSAM2AutomaticMaskGenerator.from_pretrained(model_id=args.model_type, callbacks=[CountInputs(), TimeItCallback()])
 
     print(f"Eval on datasets:{args.dataset_name}")
-    args.input = "../datasets/" + args.dataset_name + "/test_images"
-    if not os.path.isdir(args.input):
-        targets = [args.input]
-    else:
-        targets = [
-            f for f in os.listdir(args.input) if not os.path.isdir(os.path.join(args.input, f))
-        ]
-        targets = [os.path.join(args.input, f) for f in targets]
+    args.input = "datasets/" + args.dataset_name + "/Images"
+    print(os.path.isdir(args.input))
+
+    targets = [
+        f for f in os.listdir(args.input) if not os.path.isdir(os.path.join(args.input, f))
+    ]
+    targets = [os.path.join(args.input, f) for f in targets]
     
     print(f"Processing {len(targets)} images in '{args.input}' and writing to '{args.output}'")
 
-    args.output = "/leonardo_work/IscrC_SLEY/azirilli/SAM-Not-Perfect/sam_output/" + args.dataset_name + "/" + 'base_large'
+    args.output = "/home/zirilli/is-sam2-right/base_sam_output/" + args.dataset_name + "/" + 'base_large' if 'facebook' in args.model_type else "/home/zirilli/is-sam2-right/efficient_sam_output/" + args.dataset_name + "/" + 'base_large'
     os.makedirs(args.output, exist_ok=True)
 
-    for t in targets:
-        print(f"Processing '{t}'...")
+    for t in tqdm.tqdm(targets):
+        print(t)
+        base = os.path.basename(t)
+        base = os.path.splitext(base)[0]
+        save_base = os.path.join(args.output, base)
+        if os.path.exists(save_base):
+            continue
+        #print(f"Processing '{t}'...")
         image = cv2.imread(t)
         if image is None:
             print(f"Could not load '{t}' as an image, skipping...")
             continue
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
-        masks = generator.generate(image)
+        try:
+            masks = generator.generate(image)
+        except OutOfMemoryError: 
+            print(f"WARNING: OOM error for image {t}, skipping...")
+            continue
 
-        base = os.path.basename(t)
-        base = os.path.splitext(base)[0]
-        save_base = os.path.join(args.output, base)
         if output_mode == "binary_mask":
             os.makedirs(save_base, exist_ok=False)
             write_masks_to_folder(masks, save_base)
@@ -251,6 +263,10 @@ def main(args: argparse.Namespace) -> None:
             save_file = save_base + ".json"
             with open(save_file, "w") as f:
                 json.dump(masks, f)
+                
+    if hasattr(generator, 'callbacks'):
+        for cb in generator.callbacks:
+            cb.print_stats()
     print("Done!")
 
 

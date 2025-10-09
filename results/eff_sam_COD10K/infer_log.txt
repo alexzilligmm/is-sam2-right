@@ -1,0 +1,1 @@
+2025-10-09 13:13:33,262 Average best Dice 0.3256 Average best F1 0.1628 Average best MAE 0.5846 number: 4000

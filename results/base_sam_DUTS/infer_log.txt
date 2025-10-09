@@ -1,0 +1,1 @@
+2025-10-08 23:46:38,032 Average best Dice 0.4279 Average best F1 0.2140 Average best MAE 0.2999 number: 5019 time: 2:20m 

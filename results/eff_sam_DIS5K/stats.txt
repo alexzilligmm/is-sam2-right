@@ -1,0 +1,3 @@
+Average number of input points 20.90
+Average time per image 0.916 s
+Total time 1677.8673
