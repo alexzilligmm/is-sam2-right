@@ -1,3 +1,4 @@
+import concurrent.futures
 import os
 import logging
 import argparse
@@ -138,34 +139,70 @@ def find_best_dice(prediction_folder, ground_truth_file, folder):
         #     best_f_m_measure = f_m_measure
     return best_dice, best_f_measure, best_prediction_file, best_mae
 
+def process_folder(folder, root_folder, ground_truth_folder):
+    """
+    Worker function executed in a separate process.
+    Returns (folder, prediction_folder, best_dice, best_f_measure, best_prediction_file, best_mae)
+    or returns (folder, prediction_folder, None, None, None, None) on error/missing files.
+    """
+    prediction_folder = os.path.join(root_folder, folder)
+    ground_truth_file = os.path.join(ground_truth_folder, folder + ".png")
+    if not os.path.isdir(prediction_folder):
+        # Not a folder with predictions: skip
+        logging.warning(f"Skipping {prediction_folder}: not a directory")
+        return (folder, prediction_folder, None, None, None, None)
+    if not os.path.isfile(ground_truth_file):
+        logging.warning(f"Missing ground truth for {folder}: {ground_truth_file}")
+        return (folder, prediction_folder, None, None, None, None)
+
+    try:
+        best_dice, best_f_measure, best_prediction_file, best_mae = find_best_dice(prediction_folder, ground_truth_file, folder)
+        return (folder, prediction_folder, best_dice, best_f_measure, best_prediction_file, best_mae)
+    except Exception as e:
+        logging.exception(f"Error processing {prediction_folder}: {e}")
+        return (folder, prediction_folder, None, None, None, None)
+
 def main():
-    # root_folder = "/home/david/PycharmProjects/Sam_eval/SOD/Sam_duts"
-    # ground_truth_folder = "/home/david/dataset/2DSOD/testData/DUTS/test_masks"
+    folders = sorted(os.listdir(args.root_folder))
+    n_workers = max(1, os.cpu_count() -1)
 
-    total_dice = 0
-    total_f_measure = 0
-    total_mae = 0
-
+    total_dice = 0.0
+    total_f_measure = 0.0
+    total_mae = 0.0
     folder_count = 0
 
-    folders = os.listdir(args.root_folder)
-    for folder in tqdm(folders, desc="Processing folders"):
-        prediction_folder = os.path.join(args.root_folder, folder)
-        ground_truth_file = os.path.join(args.ground_truth_folder, folder + ".png")  # 根据实际情况修改真值文件的扩展名
+    results = []
 
-        # if os.path.isdir(prediction_folder) and os.path.isfile(ground_truth_file):
+    logging.info(f"Starting multiprocessing evaluation with {n_workers} workers on {len(folders)} items.")
 
-        best_dice, best_f_measure, best_prediction_file, best_mae = find_best_dice(prediction_folder, ground_truth_file, folder)
-        print(f"prediction_folder：{prediction_folder}")
-        print(f"best_prediction_file：{best_prediction_file}")
-        print(f"best_dice：{best_dice}")
-        print(f"best_f1_measure：{best_f_measure}")
-        print(f"best_mae：{best_mae}")
+    # Use ProcessPoolExecutor for CPU-bound work (true multicore)
+    with concurrent.futures.ProcessPoolExecutor(max_workers=n_workers) as executor:
+        future_to_folder = {executor.submit(process_folder, folder, args.root_folder, args.ground_truth_folder): folder for folder in folders}
+        for future in tqdm(concurrent.futures.as_completed(future_to_folder), total=len(future_to_folder), desc="Processing folders"):
+            folder = future_to_folder[future]
+            try:
+                res = future.result()
+            except Exception as e:
+                logging.exception(f"Worker failed for {folder}: {e}")
+                continue
 
-        total_dice += best_dice
-        total_f_measure += best_f_measure
-        total_mae += best_mae
-        folder_count += 1
+            # res: (folder, prediction_folder, best_dice, best_f_measure, best_prediction_file, best_mae)
+            _, prediction_folder, best_dice, best_f_measure, best_prediction_file, best_mae = res
+
+            if best_dice is None:
+                # skip missing/error cases
+                continue
+
+            folder_count += 1
+            total_dice += float(best_dice)
+            total_f_measure += float(best_f_measure)
+            total_mae += float(best_mae)
+
+            logging.info(f"prediction_folder: {prediction_folder} | best_prediction_file: {best_prediction_file} | best_dice: {best_dice:.4f} | best_f1_measure: {best_f_measure:.4f} | best_mae: {best_mae:.4f}")
+
+    if folder_count == 0:
+        logging.warning("No folders processed successfully. Exiting.")
+        return
 
     average_dice = total_dice / folder_count
     average_f1_measure = total_f_measure / folder_count

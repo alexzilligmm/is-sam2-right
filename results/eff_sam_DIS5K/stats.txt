@@ -1,3 +1,5 @@
 Average number of input points 20.90
 Average time per image 0.916 s
 Total time 1677.8673
+
+2025-10-10 10:56:32,590 Average best Dice 0.4535 Average best F1 0.2268 Average best MAE 0.1619 number: 1957
