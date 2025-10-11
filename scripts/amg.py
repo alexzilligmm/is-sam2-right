@@ -219,8 +219,8 @@ def main(args: argparse.Namespace) -> None:
     output_mode = "coco_rle" if args.convert_to_rle else "binary_mask"
     # amg_kwargs = get_amg_kwargs(args)
     # generator = SamAutomaticMaskGenerator(sam, output_mode=output_mode, **amg_kwargs)
-    # generator = SAM2AutomaticMaskGenerator.from_pretrained(model_id=args.model_type, callbacks=[CountInputs(), TimeItCallback()])
-    generator = EfficientSAM2AutomaticMaskGenerator.from_pretrained(model_id=args.model_type, callbacks=[CountInputs(), TimeItCallback()])
+    generator = SAM2AutomaticMaskGenerator.from_pretrained(model_id=args.model_type, callbacks=[CountInputs(), TimeItCallback()])
+    # generator = EfficientSAM2AutomaticMaskGenerator.from_pretrained(model_id=args.model_type, callbacks=[CountInputs(), TimeItCallback()])
 
     print(f"Eval on datasets:{args.dataset_name}")
     args.input = "datasets/" + args.dataset_name + "/Images"
