@@ -2,29 +2,28 @@ import os
 from pathlib import Path
 from torchvision.datasets import SBU
 
-# 1️⃣ Define paths
-root = Path("/datasets/SBU")
+# Use the current folder as root
+root = Path(".") / "datasets" / "SBU"
 images_dir = root / "Images"
 masks_dir = root / "Masks"
 
-# Create folders if they don't exist
+# Create the folders
 images_dir.mkdir(parents=True, exist_ok=True)
 masks_dir.mkdir(parents=True, exist_ok=True)
 
-# 2️⃣ Initialize the dataset (downloads automatically if not found)
+# Initialize the dataset (downloads automatically if needed)
 dataset = SBU(root=root, download=True)
 
-# 3️⃣ Move images into Images/
+# Move images into Images/
 for photo in dataset.photos:
     src = root / "dataset" / photo
     dst = images_dir / photo
     if src.exists():
         src.rename(dst)
 
-# 4️⃣ Move masks into Masks/ (if they exist)
-# Note: You must know the naming convention of the mask files
+# Move masks into Masks/ (if they exist)
 for photo in dataset.photos:
-    mask_name = photo.replace(".jpg", "_mask.png")  # adjust as needed
+    mask_name = photo.replace(".jpg", "_mask.png")  # adjust if your masks have different names
     src_mask = root / "dataset" / mask_name
     if src_mask.exists():
         dst_mask = masks_dir / mask_name
