@@ -1,0 +1,101 @@
+2025-10-16 18:48:55,004 Starting multiprocessing evaluation with 31 workers on 92 items.
+2025-10-16 18:48:55,600 Folder: 13#Insect#10#Mosquito#1570856967_cc0403172d_o | Best File: None | Dice: 0.0000 | F1: 0.0000 | IoU: 0.0000 | MAE: 1.0000
+2025-10-16 18:48:59,541 Folder: 13#Insect#6#Centipede#5770133477_91d01fae9e_o | Best File: None | Dice: 0.0000 | F1: 0.0000 | IoU: 0.0000 | MAE: 1.0000
+2025-10-16 18:48:59,614 Folder: 1#Accessories#3#Eyeglasses#8739664408_da7bb52170_o | Best File: 11.png | Dice: 0.0481 | F1: 0.0481 | IoU: 0.0246 | MAE: 0.0597
+2025-10-16 18:49:06,628 Folder: 14#Kitchenware#6#Spoon#6686230335_9660eaed97_o | Best File: None | Dice: 0.0000 | F1: 0.0000 | IoU: 0.0000 | MAE: 1.0000
+2025-10-16 18:49:09,651 Folder: 2#Aircraft#5#Kite#2500127887_67453f2b51_o | Best File: 5.png | Dice: 0.2545 | F1: 0.2545 | IoU: 0.1458 | MAE: 0.0274
+2025-10-16 18:49:19,619 Folder: 16#Music Instrument#7#Tuba#30110680307_0d923b4235_o | Best File: 6.png | Dice: 0.1472 | F1: 0.1472 | IoU: 0.0794 | MAE: 0.2757
+2025-10-16 18:49:22,909 Folder: 11#Furniture#16#Stool#15403817144_9069cb17e9_o | Best File: 0.png | Dice: 0.8039 | F1: 0.8039 | IoU: 0.6721 | MAE: 0.1654
+2025-10-16 18:49:44,381 Folder: 2#Aircraft#7#UAV#42028786810_408d51dbd4_o | Best File: 9.png | Dice: 0.4175 | F1: 0.4175 | IoU: 0.2638 | MAE: 0.1968
+2025-10-16 18:49:47,185 Folder: 20#Sports#14#Wakesurfing#26289036643_1c90e1b7a0_o | Best File: 1.png | Dice: 0.0894 | F1: 0.0894 | IoU: 0.0468 | MAE: 0.0549
+2025-10-16 18:50:02,010 Folder: 20#Sports#2#Fencing#3470403167_2a4c9d3b5e_o | Best File: 8.png | Dice: 0.0893 | F1: 0.0893 | IoU: 0.0467 | MAE: 0.0529
+2025-10-16 18:50:37,410 Folder: 2#Aircraft#4#Helicopter#7416160842_ca8003cb3f_o | Best File: 22.png | Dice: 0.6379 | F1: 0.6379 | IoU: 0.4683 | MAE: 0.0664
+2025-10-16 18:50:48,808 Folder: 11#Furniture#2#Bench#6075877354_e63983b412_o | Best File: 27.png | Dice: 0.7869 | F1: 0.7869 | IoU: 0.6487 | MAE: 0.0893
+2025-10-16 18:50:58,354 Folder: 20#Sports#3#Fishing#436776074_4b58ada7bb_o | Best File: 7.png | Dice: 0.2760 | F1: 0.2760 | IoU: 0.1601 | MAE: 0.0059
+2025-10-16 18:51:17,456 Folder: 14#Kitchenware#9#Teapot#5366257180_9437b2eb45_o | Best File: 12.png | Dice: 0.2430 | F1: 0.2430 | IoU: 0.1383 | MAE: 0.1469
+2025-10-16 18:51:19,552 Folder: 11#Furniture#18#TableChair#3518100388_54ea475248_o | Best File: 32.png | Dice: 0.3854 | F1: 0.3854 | IoU: 0.2387 | MAE: 0.0263
+2025-10-16 18:51:20,401 Folder: 2#Aircraft#1#Airplane#39233090174_1c0df0ac9e_o | Best File: 12.png | Dice: 0.1363 | F1: 0.1363 | IoU: 0.0732 | MAE: 0.0897
+2025-10-16 18:51:37,481 Folder: 20#Sports#6#PoleVault#8371995091_4b270a11f7_o | Best File: 2.png | Dice: 0.0010 | F1: 0.0010 | IoU: 0.0005 | MAE: 0.1185
+2025-10-16 18:52:01,989 Folder: 21#Tool#11#Stand#1801674139_b76405908c_o | Best File: 26.png | Dice: 0.2994 | F1: 0.2994 | IoU: 0.1761 | MAE: 0.1183
+2025-10-16 18:52:16,437 Folder: 1#Accessories#5#Jewelry#37741375584_772a67b247_o | Best File: 6.png | Dice: 0.2213 | F1: 0.2213 | IoU: 0.1244 | MAE: 0.1501
+2025-10-16 18:52:22,818 Folder: 21#Tool#11#Stand#197806388_2e2777ec2e_o | Best File: 1.png | Dice: 0.6818 | F1: 0.6818 | IoU: 0.5173 | MAE: 0.0541
+2025-10-16 18:53:51,504 Folder: 11#Furniture#11#Handrail#IMG_20210512_192748 | Best File: 7.png | Dice: 0.1679 | F1: 0.1679 | IoU: 0.0916 | MAE: 0.0410
+2025-10-16 18:53:52,776 Folder: 14#Kitchenware#11#WireWhisk#49850572478_acde67c44c_o | Best File: 4.png | Dice: 0.0489 | F1: 0.0489 | IoU: 0.0251 | MAE: 0.3485
+2025-10-16 18:53:53,117 Folder: 1#Accessories#5#Jewelry#4066319527_2e62a37568_o | Best File: 16.png | Dice: 0.2358 | F1: 0.2358 | IoU: 0.1336 | MAE: 0.0448
+2025-10-16 18:53:56,316 Folder: 13#Insect#7#Dragonfly#17780453174_a937674543_o | Best File: 42.png | Dice: 0.5015 | F1: 0.5015 | IoU: 0.3347 | MAE: 0.0828
+2025-10-16 18:55:04,455 Folder: 20#Sports#9#RockClimbing#3259612092_ff93866ffb_o | Best File: 22.png | Dice: 0.5559 | F1: 0.5559 | IoU: 0.3849 | MAE: 0.0198
+2025-10-16 18:55:08,754 Folder: 14#Kitchenware#10#WineGlass#4061480850_3467e13fc8_o | Best File: 13.png | Dice: 0.1302 | F1: 0.1302 | IoU: 0.0696 | MAE: 0.5896
+2025-10-16 18:55:08,970 Folder: 20#Sports#3#Fishing#11257316874_6fe68bcff7_o | Best File: 4.png | Dice: 0.3357 | F1: 0.3357 | IoU: 0.2017 | MAE: 0.0113
+2025-10-16 18:55:16,256 Folder: 11#Furniture#18#TableChair#24313558515_f9f17561ec_o | Best File: 55.png | Dice: 0.4702 | F1: 0.4702 | IoU: 0.3074 | MAE: 0.0954
+2025-10-16 18:55:22,656 Folder: 20#Sports#9#RockClimbing#3259611208_4813736731_o | Best File: 26.png | Dice: 0.0014 | F1: 0.0014 | IoU: 0.0007 | MAE: 0.0087
+2025-10-16 18:55:27,248 Folder: 21#Tool#6#Key#2880225309_4dd26780cd_o | Best File: 29.png | Dice: 0.2574 | F1: 0.2574 | IoU: 0.1477 | MAE: 0.1993
+2025-10-16 18:55:39,401 Folder: 1#Accessories#8#Watch#26502110600_928b0901ca_o | Best File: 18.png | Dice: 0.3806 | F1: 0.3806 | IoU: 0.2351 | MAE: 0.2881
+2025-10-16 18:55:58,207 Folder: 10#Frame#2#BicycleFrame#3873226080_c8ed2d5f66_o | Best File: 16.png | Dice: 0.0532 | F1: 0.0532 | IoU: 0.0273 | MAE: 0.1668
+2025-10-16 18:56:03,540 Folder: 21#Tool#5#Hook#247055824_357ed3fff4_o | Best File: 13.png | Dice: 0.6171 | F1: 0.6171 | IoU: 0.4463 | MAE: 0.0974
+2025-10-16 18:56:09,285 Folder: 16#Music Instrument#1#Drum#12275378936_9a3d3e1d3d_o | Best File: 1.png | Dice: 0.3799 | F1: 0.3799 | IoU: 0.2345 | MAE: 0.3993
+2025-10-16 18:56:29,514 Folder: 22#Weapon#3#Missile#8349918905_39a53e2d5a_o | Best File: 0.png | Dice: 0.1541 | F1: 0.1541 | IoU: 0.0835 | MAE: 0.5203
+2025-10-16 18:56:36,503 Folder: 14#Kitchenware#6#Spoon#49911555352_e8cd885f7f_o | Best File: 2.png | Dice: 0.4410 | F1: 0.4410 | IoU: 0.2828 | MAE: 0.4862
+2025-10-16 18:57:38,640 Folder: 11#Furniture#8#DeskChair#8491190301_45170f8061_o | Best File: 11.png | Dice: 0.3336 | F1: 0.3336 | IoU: 0.2002 | MAE: 0.2672
+2025-10-16 18:57:49,175 Folder: 4#Architecture#12#Scaffold#7207036096_5cfe0575dc_o | Best File: 6.png | Dice: 0.1830 | F1: 0.1830 | IoU: 0.1007 | MAE: 0.0673
+2025-10-16 18:57:52,119 Folder: 3#Aquatic#7#Octopus#7231448750_2ee37630de_o | Best File: 14.png | Dice: 0.1300 | F1: 0.1300 | IoU: 0.0695 | MAE: 0.2600
+2025-10-16 18:57:57,075 Folder: 4#Architecture#14#Stair#8304119719_7c800553ed_o | Best File: 4.png | Dice: 0.2820 | F1: 0.2820 | IoU: 0.1641 | MAE: 0.0473
+2025-10-16 18:58:07,101 Folder: 11#Furniture#19#Shower#5232656761_909dc9a1b8_o | Best File: 39.png | Dice: 0.2727 | F1: 0.2727 | IoU: 0.1579 | MAE: 0.0151
+2025-10-16 18:58:07,650 Folder: 4#Architecture#17#Well#239280401_b14932b90a_o | Best File: 7.png | Dice: 0.0617 | F1: 0.0617 | IoU: 0.0319 | MAE: 0.0166
+2025-10-16 18:58:11,131 Folder: 4#Architecture#15#Tent#443510338_f20c38c54e_o | Best File: 2.png | Dice: 0.7760 | F1: 0.7760 | IoU: 0.6340 | MAE: 0.0890
+2025-10-16 18:58:21,319 Folder: 1#Accessories#7#Shoe#30831355246_1ab3480879_o | Best File: 5.png | Dice: 0.1480 | F1: 0.1480 | IoU: 0.0799 | MAE: 0.1005
+2025-10-16 18:58:28,157 Folder: 1#Accessories#1#Bag#26345192014_f722d1ef0b_o | Best File: 4.png | Dice: 0.3650 | F1: 0.3650 | IoU: 0.2232 | MAE: 0.4495
+2025-10-16 18:58:34,524 Folder: 4#Architecture#5#GasStation#3696248250_4398905f57_o | Best File: 10.png | Dice: 0.8188 | F1: 0.8188 | IoU: 0.6932 | MAE: 0.0727
+2025-10-16 18:58:39,858 Folder: 11#Furniture#7#Desk#2952281650_d2aa47929e_o | Best File: 10.png | Dice: 0.2978 | F1: 0.2978 | IoU: 0.1749 | MAE: 0.2964
+2025-10-16 18:58:39,988 Folder: 21#Tool#8#Scale#31946428472_d28def471b_o | Best File: 1.png | Dice: 0.4449 | F1: 0.4449 | IoU: 0.2861 | MAE: 0.2507
+2025-10-16 18:58:48,069 Folder: 5#Artifact#3#Handcraft#3292544714_4142e33873_o | Best File: 15.png | Dice: 0.1365 | F1: 0.1365 | IoU: 0.0732 | MAE: 0.1141
+2025-10-16 18:58:57,741 Folder: 13#Insect#11#Spider#28043109385_8b04c9b8f0_o | Best File: 13.png | Dice: 0.2007 | F1: 0.2007 | IoU: 0.1115 | MAE: 0.0630
+2025-10-16 18:58:59,391 Folder: 6#Automobile#12#Truck#4939099740_974c1a7458_o | Best File: 1.png | Dice: 0.1406 | F1: 0.1406 | IoU: 0.0756 | MAE: 0.5094
+2025-10-16 18:59:00,527 Folder: 21#Tool#4#Flag#2776515140_1abe3eedf2_o | Best File: 1.png | Dice: 0.2736 | F1: 0.2736 | IoU: 0.1585 | MAE: 0.1941
+2025-10-16 18:59:08,181 Folder: 4#Architecture#5#GasStation#2274063636_b99c4eba90_o | Best File: 6.png | Dice: 0.9673 | F1: 0.9673 | IoU: 0.9367 | MAE: 0.0123
+2025-10-16 18:59:11,445 Folder: 3#Aquatic#2#Seadragon#5289982530_77f40eb895_o | Best File: 2.png | Dice: 0.1524 | F1: 0.1524 | IoU: 0.0825 | MAE: 0.0557
+2025-10-16 19:00:03,385 Folder: 6#Automobile#11#Tractor#7033155925_4a89fece3f_o | Best File: 8.png | Dice: 0.4353 | F1: 0.4353 | IoU: 0.2782 | MAE: 0.2293
+2025-10-16 19:00:11,581 Folder: 20#Sports#11#Skiing#14362602383_5f56b958eb_o | Best File: 8.png | Dice: 0.0991 | F1: 0.0991 | IoU: 0.0522 | MAE: 0.2181
+2025-10-16 19:00:59,637 Folder: 11#Furniture#6#DentalChair#11042914985_f365aa88e4_o | Best File: 29.png | Dice: 0.2454 | F1: 0.2454 | IoU: 0.1399 | MAE: 0.1112
+2025-10-16 19:01:11,216 Folder: 5#Artifact#1#Basket#2060877142_e525b8e971_o | Best File: 1.png | Dice: 0.0720 | F1: 0.0720 | IoU: 0.0374 | MAE: 0.1752
+2025-10-16 19:01:12,383 Folder: 3#Aquatic#5#Shrimp#46585256025_bdda8b4aef_o | Best File: 6.png | Dice: 0.2003 | F1: 0.2003 | IoU: 0.1113 | MAE: 0.0563
+2025-10-16 19:02:23,201 Folder: 7#Electrical#9#TransmissionTower#31549516125_f7cc96df63_o | Best File: 3.png | Dice: 0.1513 | F1: 0.1513 | IoU: 0.0818 | MAE: 0.0826
+2025-10-16 19:02:24,893 Folder: 21#Tool#11#Stand#IMG_20210520_203901 | Best File: 10.png | Dice: 0.3621 | F1: 0.3621 | IoU: 0.2211 | MAE: 0.0753
+2025-10-16 19:02:47,486 Folder: 8#Electronics#8#Monitor#2430113211_6fee065b2b_o | Best File: 3.png | Dice: 0.6593 | F1: 0.6593 | IoU: 0.4918 | MAE: 0.1078
+2025-10-16 19:02:49,934 Folder: 21#Tool#6#Key#4316456076_ba2eb26ea7_o | Best File: 2.png | Dice: 0.4269 | F1: 0.4269 | IoU: 0.2714 | MAE: 0.2852
+2025-10-16 19:03:50,749 Folder: 2#Aircraft#7#UAV#37599678050_a3bd08b7c8_o | Best File: 30.png | Dice: 0.0468 | F1: 0.0468 | IoU: 0.0240 | MAE: 0.0726
+2025-10-16 19:03:56,423 Folder: 3#Aquatic#1#Lobster#4726072445_fea6ac2bd6_o | Best File: 12.png | Dice: 0.0565 | F1: 0.0565 | IoU: 0.0291 | MAE: 0.2140
+2025-10-16 19:04:05,228 Folder: 4#Architecture#4#Fence#2947874994_96f9b40895_o | Best File: 17.png | Dice: 0.2615 | F1: 0.2615 | IoU: 0.1504 | MAE: 0.2661
+2025-10-16 19:04:09,571 Folder: 11#Furniture#4#Chair#16519736446_08c042b3ac_o | Best File: 16.png | Dice: 0.0549 | F1: 0.0549 | IoU: 0.0282 | MAE: 0.1427
+2025-10-16 19:04:39,762 Folder: 6#Automobile#8#Harvester#1881239334_5535de4eac_o | Best File: 9.png | Dice: 0.0702 | F1: 0.0702 | IoU: 0.0364 | MAE: 0.1246
+2025-10-16 19:04:58,461 Folder: 11#Furniture#9#Easel#6879721377_9bd69cd2d5_o | Best File: 43.png | Dice: 0.1664 | F1: 0.1664 | IoU: 0.0907 | MAE: 0.1756
+2025-10-16 19:04:58,534 Folder: 9#Entertainment#1#GymEquipment#6143764370_cf68a1df46_o | Best File: 52.png | Dice: 0.3622 | F1: 0.3622 | IoU: 0.2211 | MAE: 0.1677
+2025-10-16 19:05:14,296 Folder: 3#Aquatic#1#Lobster#15500956453_8888b1bde1_o | Best File: 8.png | Dice: 0.0553 | F1: 0.0553 | IoU: 0.0285 | MAE: 0.2349
+2025-10-16 19:05:18,450 Folder: 9#Entertainment#2#KidsPlayground#3214787676_bd11a4e27a_o | Best File: 16.png | Dice: 0.1213 | F1: 0.1213 | IoU: 0.0645 | MAE: 0.1077
+2025-10-16 19:05:40,523 Folder: 6#Automobile#10#SteeringWheel#29842746_7e021b9dc4_o | Best File: 26.png | Dice: 0.2153 | F1: 0.2153 | IoU: 0.1206 | MAE: 0.0523
+2025-10-16 19:06:04,124 Folder: 21#Tool#8#Scale#14864834475_2c21bc03be_o | Best File: 61.png | Dice: 0.4819 | F1: 0.4819 | IoU: 0.3175 | MAE: 0.1364
+2025-10-16 19:06:48,228 Folder: 7#Electrical#6#StreetLamp#14621370284_240ed68f88_o | Best File: 24.png | Dice: 0.2800 | F1: 0.2800 | IoU: 0.1628 | MAE: 0.0031
+2025-10-16 19:07:06,364 Folder: 7#Electrical#1#Cable#IMG_20210621_202700 | Best File: 38.png | Dice: 0.0381 | F1: 0.0381 | IoU: 0.0194 | MAE: 0.0464
+2025-10-16 19:07:19,065 Folder: 20#Sports#1#Archery#8846242814_d8779dff58_o | Best File: 10.png | Dice: 0.5743 | F1: 0.5743 | IoU: 0.4028 | MAE: 0.1641
+2025-10-16 19:07:20,680 Folder: 6#Automobile#3#Car#2761291086_1f50fd9c97_o | Best File: 1.png | Dice: 0.4997 | F1: 0.4997 | IoU: 0.3331 | MAE: 0.3663
+2025-10-16 19:08:03,518 Folder: 4#Architecture#9#OilWell#6295197417_55830b9651_o | Best File: 5.png | Dice: 0.1591 | F1: 0.1591 | IoU: 0.0864 | MAE: 0.0836
+2025-10-16 19:08:14,989 Folder: 6#Automobile#5#Crane#8274452039_04a97a7a21_o | Best File: 5.png | Dice: 0.0382 | F1: 0.0382 | IoU: 0.0195 | MAE: 0.1132
+2025-10-16 19:08:18,915 Folder: 5#Artifact#3#Handcraft#322094666_d6f5021446_o | Best File: 63.png | Dice: 0.0055 | F1: 0.0055 | IoU: 0.0027 | MAE: 0.1365
+2025-10-16 19:08:24,326 Folder: 6#Automobile#9#Motorcycle#16774184543_ab1ba17abe_o | Best File: 2.png | Dice: 0.2537 | F1: 0.2537 | IoU: 0.1452 | MAE: 0.1722
+2025-10-16 19:08:37,852 Folder: 21#Tool#24#Hammer#25569672813_fa702470a8_o | Best File: 68.png | Dice: 0.5721 | F1: 0.5721 | IoU: 0.4006 | MAE: 0.0327
+2025-10-16 19:09:13,453 Folder: 21#Tool#3#Clock#43548922014_34015b9f85_o | Best File: 26.png | Dice: 0.2904 | F1: 0.2904 | IoU: 0.1698 | MAE: 0.4249
+2025-10-16 19:09:54,508 Folder: 5#Artifact#5#Toy#IMG_20210630_201026 | Best File: 7.png | Dice: 0.1523 | F1: 0.1523 | IoU: 0.0824 | MAE: 0.1045
+2025-10-16 19:10:36,238 Folder: 21#Tool#6#Key#11966089533_3becd78b44_o | Best File: 1.png | Dice: 0.8393 | F1: 0.8393 | IoU: 0.7230 | MAE: 0.0362
+2025-10-16 19:10:55,490 Folder: 4#Architecture#13#Sculpture#7178448264_bd223d95ed_o | Best File: 14.png | Dice: 0.2475 | F1: 0.2475 | IoU: 0.1412 | MAE: 0.1289
+2025-10-16 19:11:08,673 Folder: 8#Electronics#2#Camcorder#30503666116_b976d2a69f_o | Best File: 16.png | Dice: 0.3301 | F1: 0.3301 | IoU: 0.1977 | MAE: 0.2984
+2025-10-16 19:12:02,764 Folder: 17#Non-motor Vehicle#2#Bicycle#10535915873_96702b161b_o | Best File: 1.png | Dice: 0.1775 | F1: 0.1775 | IoU: 0.0974 | MAE: 0.1786
+2025-10-16 19:12:13,044 Folder: 11#Furniture#2#Bench#27472672169_bb0a7eeb76_o | Best File: 117.png | Dice: 0.8863 | F1: 0.8863 | IoU: 0.7958 | MAE: 0.0382
+2025-10-16 19:12:51,987 Folder: 4#Architecture#11#Pipe#31592531357_163075d7ba_o | Best File: 79.png | Dice: 0.1987 | F1: 0.1987 | IoU: 0.1103 | MAE: 0.2659
+2025-10-16 19:14:04,688 Folder: 21#Tool#15#Tapeline#43959464975_d32834798b_o | Best File: 4.png | Dice: 0.4469 | F1: 0.4469 | IoU: 0.2877 | MAE: 0.0131
+2025-10-16 19:14:04,747 --------------------------------------------------
+2025-10-16 19:14:04,747 Overall Average Scores:
+2025-10-16 19:14:04,747 Average Dice: 0.2909
+2025-10-16 19:14:04,747 Average F1-measure: 0.2909
+2025-10-16 19:14:04,747 Average IoU: 0.1963
+2025-10-16 19:14:04,747 Average MAE: 0.1807
+2025-10-16 19:14:04,747 Total folders processed: 92
+2025-10-16 19:14:04,747 --------------------------------------------------

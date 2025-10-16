@@ -1,5 +1,0 @@
-Average number of input points 1024
-Average time per image 2.9 s
-Total time 2776 (only 951 images due to OOM issues)
-
-2025-10-10 12:03:14,531 Average best Dice 0.2848 Average best F1 0.1424 Average best MAE 0.1940 number: 951

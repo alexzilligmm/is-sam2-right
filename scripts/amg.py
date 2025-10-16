@@ -18,7 +18,7 @@ from typing import Any, Dict, List
 from torch import OutOfMemoryError
 import tqdm
 
-DATASETS = ['DUTS', 'COME15K', 'DIS', 'COD10K', 'SBU', 'CDS2K', 'ColonDB']
+DATASETS = ['DUTS', 'COME15K', 'VT5000', 'DIS5K', 'COD10K', 'SBU', 'CDS2K', 'ColonDB']
 
 parser = argparse.ArgumentParser(
     description=(
@@ -214,13 +214,14 @@ def get_amg_kwargs(args):
 
 def main(args: argparse.Namespace) -> None:
     print("Loading model...")
-    # sam = sam_model_registry[args.model_type](checkpoint=args.checkpoint)
-    # _ = sam.to(device=args.device)
+    
     output_mode = "coco_rle" if args.convert_to_rle else "binary_mask"
-    # amg_kwargs = get_amg_kwargs(args)
-    # generator = SamAutomaticMaskGenerator(sam, output_mode=output_mode, **amg_kwargs)
-    generator = SAM2AutomaticMaskGenerator.from_pretrained(model_id=args.model_type, callbacks=[CountInputs(), TimeItCallback()])
-    # generator = EfficientSAM2AutomaticMaskGenerator.from_pretrained(model_id=args.model_type, callbacks=[CountInputs(), TimeItCallback()])
+
+    # generator = SamAutomaticMaskGenerator(sam, output_mode=output_mode)
+    if 'facebook' in args.model_type:
+        generator = SAM2AutomaticMaskGenerator.from_pretrained(model_id=args.model_type, callbacks=[CountInputs(), TimeItCallback()])
+    else:
+        generator = EfficientSAM2AutomaticMaskGenerator.from_pretrained(model_id=args.model_type, callbacks=[CountInputs(), TimeItCallback()])
 
     print(f"Eval on datasets:{args.dataset_name}")
     args.input = "datasets/" + args.dataset_name + "/Images"
@@ -233,7 +234,7 @@ def main(args: argparse.Namespace) -> None:
     
     print(f"Processing {len(targets)} images in '{args.input}' and writing to '{args.output}'")
 
-    args.output = "/home/zirilli/is-sam2-right/base_sam_output/" + args.dataset_name + "/" + 'base_large' if 'facebook' in args.model_type else "/home/zirilli/is-sam2-right/efficient_sam_output/" + args.dataset_name + "/" + 'base_large'
+    args.output = "/leonardo_work/IscrC_SLEY/azirilli/is-sam2-right/is-sam2-right/base_sam_output/" + args.dataset_name + "/" + 'base_large' if 'facebook' in args.model_type else "/leonardo_work/IscrC_SLEY/azirilli/is-sam2-right/is-sam2-right/eff_sam_output/" + args.dataset_name + "/" + 'base_large'
     os.makedirs(args.output, exist_ok=True)
 
     for t in tqdm.tqdm(targets):
@@ -265,8 +266,11 @@ def main(args: argparse.Namespace) -> None:
                 json.dump(masks, f)
                 
     if hasattr(generator, 'callbacks'):
-        for cb in generator.callbacks:
-            cb.print_stats()
+        with open(os.path.join(args.output, "callback_stats.txt"), "a") as stats_file:
+            for cb in generator.callbacks:
+                stats = cb.print_stats()
+                stats_file.write(stats + "\n")
+            
     print("Done!")
 
 
